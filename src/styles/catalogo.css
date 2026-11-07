@@ -1,0 +1,199 @@
+/* Estilos para el catálogo de productos */
+body { 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #faf8f5 0%, #f0ebe5 50%, #dfd7c8 100%);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(197, 163, 108, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Estilos para el catálogo de productos */
+main.catalogo {
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.productos {
+    max-width: 1200px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.product-grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.product-card2 img {
+    height: 250px; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-card2 {
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(10, 10, 10, 0.1);
+    background-color: #eeecea;
+}
+
+.product-card2:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.card-precio {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.btn-carrito {
+  background-color: #b8960c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+}
+
+.btn-carrito:hover {
+  background-color: #8a6e09;
+}
+
+/* Header del catálogo */
+.catalogo-header {
+  max-width: 1200px;
+  margin: 2rem auto 1.5rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.catalogo-header h1 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+
+.catalogo-header p {
+  color: #6b5a2e;
+  font-size: 1rem;
+}
+
+/* Bloque de controles */
+.productos-controles {
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+}
+
+.controles-top {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.buscador {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
+  border: 1px solid #d8cdb8;
+  background-color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.buscador:focus {
+  border-color: #b8960c;
+}
+
+.ordenar {
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
+  border: 1px solid #d8cdb8;
+  background-color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  color: #6b5a2e;
+}
+
+/* Filtros por categoría */
+.filtros {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background-color: transparent;
+  border: 1px solid #b8960c;
+  color: #6b5a2e;
+  padding: 0.45rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.filtro-btn:hover {
+  background-color: #f5f0e8;
+}
+
+.filtro-btn.active {
+  background-color: #b8960c;
+  color: #fff;
+  border-color: #b8960c;
+}
+
+.catalogo-mensaje {
+  text-align: center;
+  padding: 3rem 1rem;
+}

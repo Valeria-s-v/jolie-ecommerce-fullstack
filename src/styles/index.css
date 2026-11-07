@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body { 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #cfc5b7;
+}
+
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo e íconos */
+.logo{
+    width: 150px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.header-icons {
+    display: flex;
+    font-size: 1.2rem;
+    color: rgb(197, 163, 108);
+    align-items: center;
+}
+
+/* Navegación */
+header nav ul, footer ul {
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav ul li, footer ul li{
+    list-style: none;
+}
+
+header nav ul li a, footer a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: #c5a36c;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: rgb(197, 163, 108);
+}
+
+/* Carousel */
+#carouselExampleCaptions {
+    max-width: 100%;
+}
+
+.carousel-iner{
+    height: 600px;
+    position: relative;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    right: 0%;
+    left: 0%;
+}
+
+.carousel-caption h2 {
+    color: #c5a36c !important; 
+    font-family: 'Playfair Display', serif;
+    font-weight: 1200; 
+    font-size: 2.5rem; 
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.carousel-caption p {
+    color: #c5a36c !important; 
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1), 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 2 !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    opacity: 2 !important;
+    background-color: #c5a36c !important;
+}
+
+.carousel-indicators .active {
+    background-color: #ffffff !important; 
+    transform: scale(1.2);
+}
+
+/* Acceso rápido */
+.acceso-rapido {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjetas de imagen */
+.image-container {
+    flex: 1;
+    min-width: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 320px;
+    position: relative;
+}
+
+.image-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: 390px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Texto sobre la imagen */
+.image-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(245, 235, 220, 0.90);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.image-text h2 {
+    font-size: 4rem;
+    color: #8a6f25;
+    margin: 0;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+}
+
+.image-text p {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin: 12px 0 0 0;
+    font-weight: 800;
+    font-family: fantasy;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+/* Letras de Tendencia 2026 */
+h2 {
+    text-align: center;
+    margin-top: 3rem;
+    color: #84841b;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+}
+
+.contenedor-titulo-tendencia {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;                     
+    margin-bottom: 2rem;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    display: flex;        
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.contenedor-titulo-tendencia h2 {
+    margin: 0;
+    color: #a89a49;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0 !important;
+}
+
+/* Sección tendencias */
+.reasons-section {
+    max-width: 1200px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.product-card img {
+    height: 280px; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.product-card {
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ccb9ab;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* =====================
+   RESPONSIVE
+   ===================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    header nav ul {
+        gap: 1rem;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .header-icons {
+        font-size: 1rem;
+        gap: 10px;
+    }
+
+    /* Carousel */
+    .carousel-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    /* Acceso rápido */
+    .acceso-rapido {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .image-container {
+        flex: none;
+        width: 100%;
+    }
+
+    /* Grilla tendencias */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    /* Navbar */
+    header nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .header-icons {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    /* Carousel */
+    .carousel-caption {
+        display: none;
+    }
+
+    /* Grilla tendencias */
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Tendencia titulo */
+    .contenedor-titulo-tendencia h2 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-item img {
+        height: 650px; 
+    }
+}
+/* Botones de íconos del header (búsqueda, usuario) */
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.usuario-nombre {
+    font-size: 0.85rem;
+}
